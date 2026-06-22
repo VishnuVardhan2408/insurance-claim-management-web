@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Search Customer</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>🏥 ICMS</h2>
+
+</div>
+
+<div class="container">
+
+<h1>🔍 Search Customer</h1>
+
+<form action="/search_customer" method="POST">
+
+<input type="text"
+
+name="customer_id"
+
+placeholder="Enter Customer ID"
+
+required>
+
+<br><br>
+
+<button type="submit">
+
+Search
+
+</button>
+
+</form>
+
+<br>
+
+{% if customer %}
+
+<h2>Customer Found ✅</h2>
+
+<p><b>ID:</b> {{ customer[0] }}</p>
+
+<p><b>Name:</b> {{ customer[1] }}</p>
+
+<p><b>Email:</b> {{ customer[2] }}</p>
+
+<p><b>Phone:</b> {{ customer[3] }}</p>
+
+<p><b>Policy Number:</b> {{ customer[4] }}</p>
+
+{% endif %}
+
+<br>
+
+<a href="/">
+
+<button>
+
+🏠 Home
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

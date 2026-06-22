@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Edit Customer</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>🏥 ICMS</h2>
+
+</div>
+
+<div class="container">
+
+<h1>✏️ Edit Customer</h1>
+
+<form action="/edit_customer" method="POST">
+
+<input type="text"
+
+name="customer_id"
+
+placeholder="Customer ID"
+
+required>
+
+<br>
+
+<input type="text"
+
+name="customer_name"
+
+placeholder="New Customer Name"
+
+required>
+
+<br>
+
+<input type="email"
+
+name="email"
+
+placeholder="New Email"
+
+required>
+
+<br>
+
+<input type="text"
+
+name="phone"
+
+placeholder="New Phone Number"
+
+required>
+
+<br>
+
+<input type="text"
+
+name="policy_number"
+
+placeholder="New Policy Number"
+
+required>
+
+<br><br>
+
+<button type="submit">
+
+Update Customer
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/">
+
+<button>
+
+🏠 Home
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

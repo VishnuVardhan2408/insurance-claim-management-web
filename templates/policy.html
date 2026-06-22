@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Add Policy</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>🏥 ICMS</h2>
+
+</div>
+
+<div class="container">
+
+<h1>📄 Add Policy</h1>
+
+<form action="/save_policy" method="POST">
+
+<input type="text"
+name="policy_id"
+placeholder="Policy ID"
+required>
+
+<br>
+
+<input type="text"
+name="customer_id"
+placeholder="Customer ID"
+required>
+
+<br>
+
+<select name="insurance_type">
+
+<option>Health Insurance</option>
+
+<option>Vehicle Insurance</option>
+
+<option>Life Insurance</option>
+
+<option>Travel Insurance</option>
+
+</select>
+
+<br>
+
+<input type="number"
+name="premium_amount"
+placeholder="Premium Amount"
+required>
+
+<br><br>
+
+<button type="submit">
+
+Save Policy
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/">
+
+<button>
+
+🏠 Home
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>🏥 ICMS</h2>
+
+</div>
+
+<div class="container">
+
+<h1>📊 Dashboard</h1>
+
+<div class="dashboard-grid">
+
+<div class="card">
+
+<h3>👥 Customers</h3>
+
+<p>{{ total_customers }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>📄 Policies</h3>
+
+<p>{{ total_policies }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>📝 Claims</h3>
+
+<p>{{ total_claims }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>✅ Approved</h3>
+
+<p>{{ approved_claims }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚠️ Under Review</h3>
+
+<p>{{ under_review_claims }}</p>
+
+</div>
+
+</div>
+
+<br>
+
+<a href="/">
+
+<button>
+
+🏠 Home
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>
